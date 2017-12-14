@@ -22,7 +22,7 @@ public final class TestStack {
             
             // Use our Stack<T> for binary conversion.
             do {
-                stack.push((int)input % 2);
+                stack.push((int)(input % 2));
                 input /= 2;
             } while(input != 0);
             

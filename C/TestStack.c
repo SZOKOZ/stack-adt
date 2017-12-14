@@ -1,14 +1,14 @@
+#include "Stack.h"
+
 /*
 TestStack Source
 December 12, 2017
-Demonstration of the Stack Structure in C.
+Demonstration of the Stack ADT in C.
 */
 
-#include "Stack.h"
-
-int main(int argc, char* argv[])
+int main(int argc, char *argv[])
 {
-    Stack* stack = stackCreate(sizeof(int));
+    Stack *stack = stackCreate(sizeof(int));
 
     // Ask for user input until end condition is met.
     for(;;)
@@ -17,19 +17,19 @@ int main(int argc, char* argv[])
         long input;
         scanf("%ld", &input);
 
-        // If 0 is entered, break loop.
+        // If negative is entered, break loop.
         if(input < 0) break;
 
-        // Use Stack for binary conversion.
+        // Use our Stack for binary conversion.
         do
         {
-            int bin = input % 2;
+            int bin = (int)(input % 2);
             stackPush(stack, &bin);
             input /= 2;
         }
         while(input != 0);
 
-        // Pop elements of Stack to print conversion.
+        // Pop elements of our Stack to print conversion.
         while(stackTop(stack) != NULL)
         {
             printf("%d", *((int*)stackPop(stack)));
