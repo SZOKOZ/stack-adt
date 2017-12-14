@@ -14,13 +14,13 @@ while true do
 	-- If negative is entered, break loop.
 	if input < 0 then break end
 
-	-- User our "Stack" for binary conversion.
+	-- Use our "Stack" for binary conversion.
 	repeat
 		stack:push(input % 2)
 		input = math.floor(input / 2)
 	until input == 0
 
-	-- Pop elements of out "Stack" to print conversion.
+	-- Pop elements of our "Stack" to print conversion.
 	while stack:top() do
 		io.write(stack:pop())
 	end

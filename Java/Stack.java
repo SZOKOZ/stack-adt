@@ -3,6 +3,7 @@ Stack<T> Class
 December 10, 2017
 Implementation of the Stack ADT in Java.
 */
+
 public final class Stack<T> {
     
     /*
