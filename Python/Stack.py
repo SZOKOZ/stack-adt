@@ -31,7 +31,6 @@ class Stack:
             self.top = Node(item, None)
         else:
             self.top = Node(item, self.top)
-
         return item
     
     def pop(self):
