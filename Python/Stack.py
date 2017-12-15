@@ -17,6 +17,9 @@ class Node:
 class Stack:
 
     def __init__(self, objtype):
+        if type(objtype) is not type:
+            raise TypeError("%s is not a type." % (objtype))
+            
         self.type = objtype
         self.top = None
 
